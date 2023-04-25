@@ -16,7 +16,7 @@ interface UsersDao {
     @Update(onConflict = OnConflictStrategy.REPLACE)
     suspend fun updateUser(userEntity: UserEntity)
 
-    @Query("SELECT*FROM users_list")
+    @Query("SELECT*FROM users")
     fun getAllUsers(): Flow<List<UserEntity>>
 
 }

@@ -4,12 +4,14 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "users_list")
+@Entity(tableName = "users")
 data class UserEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
     @ColumnInfo(name = "full_name")
     val name: String,
-    @ColumnInfo(defaultValue = "18")
-    val age: Int
+    @ColumnInfo(name = "gender_is", defaultValue = "1")
+    val gender:Int,
+    @ColumnInfo(name = "work", defaultValue = "Uz kassa")
+    val work:String = "Uz kassa"
 )

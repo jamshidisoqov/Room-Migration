@@ -116,8 +116,7 @@ fun UsersListScreen(users: List<UserEntity>) {
                     Spacer(modifier = Modifier.height(4.dp))
                     Text(text = "User${item.id}")
                     Spacer(modifier = Modifier.height(4.dp))
-                    Text(text = "Age${item.age}")
-                    Spacer(modifier = Modifier.height(4.dp))
+                    Text(text = "Gender${item.gender}")
                 }
             }
         }
@@ -160,7 +159,7 @@ fun AddUser(addUser: (UserEntity) -> Unit) {
 
 
         ElevatedButton(
-            onClick = { addUser(UserEntity(0, userName, age.toInt())) },
+            onClick = { addUser(UserEntity(0, userName,  1)) },
             modifier = Modifier.fillMaxWidth()
         ) {
             Text(text = "Add")
